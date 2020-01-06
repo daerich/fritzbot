@@ -13,7 +13,7 @@ client.on("ready", () => {
     })
 })
 client.on('message', msg => {
-	if (msg == "!gay"){
+	if (msg == "!test"){
 		msg.channel.send("You loco?!");
 	}
 });
