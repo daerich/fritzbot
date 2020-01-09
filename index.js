@@ -1,7 +1,10 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const fs = require("fs");
-//end of prerequisites
+const autoPurge = require('./autopurge.js');
+
+
+
 
 client.on("ready", () => {
     client.user.setPresence({
@@ -17,6 +20,10 @@ client.on('message', msg => {
 		msg.channel.send("You loco?!");
 	}
 });
+
+client.on('message', msg => {
+      autoPurge(msg);
+})
 
 
 //loggin in
