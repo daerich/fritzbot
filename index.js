@@ -1,9 +1,9 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const fs = require("fs");
-const janitorclass = require("./janitorclass.js");
-const Janitor = new janitorclass.Janitor();
-
+const date = new Date();
+const janitor = require('./janitorclass.js');
+const Janitor = new janitor.Janitor();
 
 
 client.on("ready", () => {
@@ -28,11 +28,6 @@ else{
     whosOnline.whosPlaying(msg);
 	}
 }); */
-
-client.on('message', msg => {
-      autoPurge(msg);
-})
-
 
 //loggin in
 var contents = fs.readFileSync("inc/config.txt");
