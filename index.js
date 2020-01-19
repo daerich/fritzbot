@@ -38,7 +38,9 @@ if (msg == "!id"){
 }
 });
 client.on("presenceUpdate", (oldUser, newUser) =>{
+   if(oldUser.user.bot == false){
       Online.whosPlaying(oldUser, newUser);
+    }
 })
 
 //loggin in
